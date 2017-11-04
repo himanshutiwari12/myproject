@@ -1,0 +1,136 @@
+
+# 1 "mcc_generated_files/TCPIPLibrary/lfsr.c"
+
+# 13 "C:\Program Files (x86)\Microchip\xc8\v1.35\include\stdint.h"
+typedef signed char int8_t;
+
+# 20
+typedef signed int int16_t;
+
+# 28
+typedef signed short long int int24_t;
+
+# 36
+typedef signed long int int32_t;
+
+# 43
+typedef unsigned char uint8_t;
+
+# 49
+typedef unsigned int uint16_t;
+
+# 56
+typedef unsigned short long int uint24_t;
+
+# 63
+typedef unsigned long int uint32_t;
+
+# 71
+typedef signed char int_least8_t;
+
+# 78
+typedef signed int int_least16_t;
+
+# 90
+typedef signed short long int int_least24_t;
+
+# 98
+typedef signed long int int_least32_t;
+
+# 105
+typedef unsigned char uint_least8_t;
+
+# 111
+typedef unsigned int uint_least16_t;
+
+# 121
+typedef unsigned short long int uint_least24_t;
+
+# 128
+typedef unsigned long int uint_least32_t;
+
+# 137
+typedef signed char int_fast8_t;
+
+# 144
+typedef signed int int_fast16_t;
+
+# 156
+typedef signed short long int int_fast24_t;
+
+# 164
+typedef signed long int int_fast32_t;
+
+# 171
+typedef unsigned char uint_fast8_t;
+
+# 177
+typedef unsigned int uint_fast16_t;
+
+# 187
+typedef unsigned short long int uint_fast24_t;
+
+# 194
+typedef unsigned long int uint_fast32_t;
+
+# 200
+typedef int32_t intmax_t;
+
+
+
+
+typedef uint32_t uintmax_t;
+
+
+
+
+typedef int16_t intptr_t;
+
+
+
+
+typedef uint16_t uintptr_t;
+
+# 5 "mcc_generated_files/TCPIPLibrary/lfsr.h"
+typedef uint8_t lfsr_t;
+int lfsr_getSequenceCount(void);
+lfsr_t lfsr_getSequence(void);
+void lfsr_reset(void);
+void lfsr_setSequence(int s);
+lfsr_t lfsr(void);
+
+# 6 "mcc_generated_files/TCPIPLibrary/lfsr.c"
+char sequenceIndex = 0;
+const lfsr_t xorSequences[] = {0x41,0x44,0x47,0x48,0x4E,0x53,0x55,0x5C,0x5F,0x60,0x65,0x69,0x6A,0x72,0x77,0x78,0x7B,0x7E};
+lfsr_t xor_mask = 0x41;
+lfsr_t lfsr_value = 0x40;
+
+lfsr_t lfsr_getSequence(void)
+{
+return xorSequences[sequenceIndex];
+}
+
+int lfsr_getSequenceCount(void)
+{
+return sizeof(xorSequences)/sizeof(*xorSequences);
+}
+
+void lfsr_reset(void)
+{
+lfsr_value = 0x40;
+}
+
+void lfsr_setSequence(int s)
+{
+s %= sizeof(xorSequences)/sizeof(*xorSequences);
+xor_mask = xorSequences[s];
+}
+
+lfsr_t lfsr(void)
+{
+char lsb = lfsr_value & 1;
+lfsr_value >>= 1;
+if (lsb)
+lfsr_value ^= xor_mask;
+return lfsr_value & 0x7f;
+}

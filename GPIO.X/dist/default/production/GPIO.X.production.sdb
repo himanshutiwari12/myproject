@@ -1,0 +1,149 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1579 ]
+[d frameptr 6 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 G:\PIC16F1579\GPIO.X\Initialization.c
+[v _initCLOCK initCLOCK `(v  1 e 0 0 ]
+"13
+[v _initPINS initPINS `(v  1 e 0 0 ]
+"37 G:\PIC16F1579\GPIO.X\main.c
+[v _main main `(v  1 e 0 0 ]
+"994 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic16f1579.h
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1043
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1081
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+[s S70 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 TMR0SE 1 0 :1:4 
+`uc 1 TMR0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nWPUEN 1 0 :1:7 
+]
+"1279
+[s S79 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+]
+[u S84 . 1 `S70 1 . 1 0 `S79 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES84  1 e 1 @149 ]
+[s S28 . 1 `uc 1 SCS0 1 0 :1:0 
+`uc 1 SCS1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 IRCF0 1 0 :1:3 
+`uc 1 IRCF1 1 0 :1:4 
+`uc 1 IRCF2 1 0 :1:5 
+`uc 1 IRCF3 1 0 :1:6 
+`uc 1 SPLLEN 1 0 :1:7 
+]
+"1531
+[s S37 . 1 `uc 1 SCS 1 0 :2:0 
+`uc 1 . 1 0 :1:2 
+`uc 1 IRCF 1 0 :4:3 
+]
+[u S41 . 1 `S28 1 . 1 0 `S37 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES41  1 e 1 @153 ]
+"1879
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+"1923
+[v _LATB LATB `VEuc  1 e 1 @269 ]
+"1961
+[v _LATC LATC `VEuc  1 e 1 @270 ]
+"2513
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"2559
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"2594
+[v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
+"3089
+[v _WPUA WPUA `VEuc  1 e 1 @524 ]
+"3146
+[v _WPUB WPUB `VEuc  1 e 1 @525 ]
+"3193
+[v _WPUC WPUC `VEuc  1 e 1 @526 ]
+"10562
+[v _PPSLOCK PPSLOCK `VEuc  1 e 1 @3599 ]
+[s S104 . 1 `uc 1 PPSLOCKED 1 0 :1:0 
+]
+"10572
+[u S106 . 1 `S104 1 . 1 0 ]
+[v _PPSLOCKbits PPSLOCKbits `VES106  1 e 1 @3599 ]
+[s S131 . 1 `uc 1 INTPPS 1 0 :5:0 
+]
+"10598
+[s S133 . 1 `uc 1 INTPPS0 1 0 :1:0 
+`uc 1 INTPPS1 1 0 :1:1 
+`uc 1 INTPPS2 1 0 :1:2 
+`uc 1 INTPPS3 1 0 :1:3 
+`uc 1 INTPPS4 1 0 :1:4 
+]
+[u S139 . 1 `S131 1 . 1 0 `S133 1 . 1 0 ]
+[v _INTPPSbits INTPPSbits `VES139  1 e 1 @3600 ]
+[s S111 . 1 `uc 1 RXPPS 1 0 :5:0 
+]
+"10853
+[s S113 . 1 `uc 1 RXPPS0 1 0 :1:0 
+`uc 1 RXPPS1 1 0 :1:1 
+`uc 1 RXPPS2 1 0 :1:2 
+`uc 1 RXPPS3 1 0 :1:3 
+`uc 1 RXPPS4 1 0 :1:4 
+]
+[u S119 . 1 `S111 1 . 1 0 `S113 1 . 1 0 ]
+[v _RXPPSbits RXPPSbits `VES119  1 e 1 @3605 ]
+[s S169 . 1 `uc 1 ADCACTPPS 1 0 :5:0 
+]
+"10955
+[s S171 . 1 `uc 1 ADCACTPPS0 1 0 :1:0 
+`uc 1 ADCACTPPS1 1 0 :1:1 
+`uc 1 ADCACTPPS2 1 0 :1:2 
+`uc 1 ADCACTPPS3 1 0 :1:3 
+`uc 1 ADCACTPPS4 1 0 :1:4 
+]
+[u S177 . 1 `S169 1 . 1 0 `S171 1 . 1 0 ]
+[v _ADCACTPPSbits ADCACTPPSbits `VES177  1 e 1 @3607 ]
+[s S189 . 1 `uc 1 RA5PPS 1 0 :4:0 
+]
+"11185
+[s S191 . 1 `uc 1 RA5PPS0 1 0 :1:0 
+`uc 1 RA5PPS1 1 0 :1:1 
+`uc 1 RA5PPS2 1 0 :1:2 
+`uc 1 RA5PPS3 1 0 :1:3 
+]
+[u S196 . 1 `S189 1 . 1 0 `S191 1 . 1 0 ]
+[v _RA5PPSbits RA5PPSbits `VES196  1 e 1 @3733 ]
+[s S151 . 1 `uc 1 RC4PPS 1 0 :4:0 
+]
+"11590
+[s S153 . 1 `uc 1 RC4PPS0 1 0 :1:0 
+`uc 1 RC4PPS1 1 0 :1:1 
+`uc 1 RC4PPS2 1 0 :1:2 
+`uc 1 RC4PPS3 1 0 :1:3 
+]
+[u S158 . 1 `S151 1 . 1 0 `S153 1 . 1 0 ]
+[v _RC4PPSbits RC4PPSbits `VES158  1 e 1 @3748 ]
+"12281
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"37 G:\PIC16F1579\GPIO.X\main.c
+[v _main main `(v  1 e 0 0 ]
+{
+"44
+} 0
+"13 G:\PIC16F1579\GPIO.X\Initialization.c
+[v _initPINS initPINS `(v  1 e 0 0 ]
+{
+"59
+} 0
+"6
+[v _initCLOCK initCLOCK `(v  1 e 0 0 ]
+{
+"11
+} 0
